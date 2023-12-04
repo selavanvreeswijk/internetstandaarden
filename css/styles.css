@@ -1,0 +1,371 @@
+/*alle pagina's*/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  @font-face {
+    font-family:'PFD Black';
+    src: url('/PlayfairDisplay-Black.ttf') format('TrueType');
+  }
+
+  @font-face {
+    font-family: 'PFD Regular';
+    src: url(/PlayfairDisplay-Regular.ttf) format('TrueType');
+  }
+
+  @font-face {
+    font-family: 'PFD Medium';
+    src: url(/PlayfairDisplay-Medium.ttf) format('TrueType');
+  }
+
+h1{
+    font-family: 'PFD Black', sans-serif; 
+    letter-spacing: 0.04em;
+  }
+
+html {
+    background-color:rgba(196, 173, 149, 0.784);
+
+    font-family: 'PFD Regular', sans-serif; 
+    letter-spacing: 0.04em;
+    color: #8f3e5c;
+  }
+
+ /*body header*/
+
+header nav{
+  position: absolute;
+  z-index: 999;
+}
+
+header nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100vw;
+}
+
+header nav ul li{ 
+  padding: 1.4em;
+  margin: 1em;
+
+  text-transform: uppercase;
+  list-style: none;
+  font-family: 'PFD Medium', sans-serif; 
+}
+
+header nav ul li a{ 
+  text-decoration: none;
+  color: white;
+}
+
+nav li.selected{
+  color: #c4547d;
+}
+
+a:hover,
+a:visited:hover,
+a:active,
+a:visited:active {
+  color: #c4547d;
+  text-decoration: underline;
+}
+
+/*home*/
+
+header section { /*titel*/ /*home*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  color: white;
+  text-align: center;
+  font-size: 1.4em;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+header section a{ /*'button'*/ /*home*/
+  width: 220px; 
+  margin: 20px;
+
+  color: white; 
+  text-decoration: none;
+  font-size: 0.80em;
+
+  border: 0.75px solid white;
+  border-radius: 20px;
+  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+/*body main*/
+
+.achtergrond-beginscherm{ /*home*/
+  background-image: url('../images/rivier-en-bomen.avif');
+  background-size: 100% auto;
+
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#over-en-missie div{ /*home*/
+  display: flex;
+  flex-direction: column;
+}
+
+#over-en-missie h2{ /*home*/
+  text-transform: uppercase;
+  font-size: 2em;
+
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+#over-en-missie p{ /*home*/
+  margin-right: 10em;
+}
+
+.foto-van-sela { /*foto van mij*/ /*home*/
+    object-fit: cover;
+    width: 22vw;
+  
+    margin-top: 5em;
+    margin-right: 5em;
+    margin-left: 5em;
+}
+
+/*toen*/
+
+.rijen{ /*toen*/
+  display: flex;
+  flex-direction: column;
+}
+
+.afbeelding-links{ /*toen*/
+  display: flex;
+  flex-direction: row;
+
+  background-color: rgba(196, 173, 149, 0.617);
+
+  margin-bottom: 1em;
+}
+
+.afbeelding-links img{ /*toen*/
+  object-fit: cover;
+  width: 35vw;
+  height: 30vw;
+}
+
+.afbeelding-links div{ /*toen*/
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 3em 2em 1em 2em;
+}
+
+.afbeelding-rechts{ /*toen*/
+  display: flex;
+  flex-direction: row-reverse;
+
+  background-color: rgba(196, 173, 149, 0.617);
+
+  margin-bottom: 1em;
+}
+
+.afbeelding-rechts img{ /*toen*/
+  object-fit: cover;
+  width: 35vw;
+  height: 30vw;
+}
+
+.afbeelding-rechts div{ /*toen*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3em 2em 1em 2em;
+}
+
+.afbeelding-rechts a{
+  color: #c4547d;
+}
+
+.afbeelding-links h1{ /*toen*/
+  font-size: 8em;
+  text-transform: uppercase;
+}
+
+.afbeelding-links h2{ /*toen*/
+  font-size: 1.5em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.5em;
+}
+
+.afbeelding-rechts h2{ /*toen*/
+  font-size: 1.5em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.5em;
+}
+
+/*nu*/
+
+main figure img{ /*nu*/
+  object-fit: cover;
+  
+  width: 100vw;
+  height: 100vh;
+}
+
+.nu h1{ /*nu*/
+  display: flex;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-size: 2em;
+
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.nu div h2{ /*nu*/
+  display: flex;
+  justify-content: center;
+  
+  font-size: 0.7em;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  height: 6vh;
+}
+
+.nu p{ /*nu*/
+  width: 44vw;
+  margin: 0 auto;
+}
+
+/*dan*/
+
+main article{ /*dan*/
+  display: flex;
+  flex-direction: column;
+}
+
+article h1{ /*dan*/
+  display: flex;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-size: 7em;
+
+  margin-top: 1.5em;
+}
+
+article h2{ /*dan*/
+  display: flex;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-size: 1em;
+
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
+
+article figure{ /*dan*/
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+article figure img{ /*dan*/
+  object-fit: cover;
+  display: block;
+
+  height: 50vh;
+  margin: 0.15em;
+}
+
+article p{ /*dan*/
+  display: flex;
+  justify-content: space-between;
+
+  width: 35vw;
+  text-align: center;
+
+  padding-top: 3em;
+}
+
+/*main footer*/ /*home*/      
+
+main footer, #over-en-missie{ /*home*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 2em 3.5em 3em 3.5em;
+}
+
+main footer figure{ /*home*/
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2em;
+    width: 33vw;
+}
+
+main footer img{ /*home*/
+    object-fit: cover;
+    cursor: pointer;
+    
+    width: 30vw;
+    height: 55vh;
+
+    border-radius: 0.5em;
+}
+
+figure div h3{ /*home*/
+  text-transform: uppercase;
+
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+figure div p{ /*home*/
+  font-size: 0.9em;
+
+  padding-right: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+figure div a{ /*home*/
+  font-size: 0.8em;
+  color: #c4547d;
+}
+
+
+/*footer*/
+
+.onderaan a{ /*nu*/
+  display: block;
+
+  color:#c4547d;
+
+  margin-top: 1em;
+  margin-bottom: 5em;
+  margin-left: 28vw;
+}
+
+/*implementeren*/
