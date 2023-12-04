@@ -7,17 +7,17 @@
 
   @font-face {
     font-family:'PFD Black';
-    src: url('/PlayfairDisplay-Black.ttf') format('TrueType');
+    src: url('PlayfairDisplay-Black.ttf') format('TrueType');
   }
 
   @font-face {
     font-family: 'PFD Regular';
-    src: url(/PlayfairDisplay-Regular.ttf) format('TrueType');
+    src: url(PlayfairDisplay-Regular.ttf) format('TrueType');
   }
 
   @font-face {
     font-family: 'PFD Medium';
-    src: url(/PlayfairDisplay-Medium.ttf) format('TrueType');
+    src: url(PlayfairDisplay-Medium.ttf) format('TrueType');
   }
 
 h1{
