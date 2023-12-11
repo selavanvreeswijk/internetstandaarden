@@ -5,20 +5,20 @@
     padding: 0;
   }
 
-  @font-face {
+@font-face {
     font-family:'PFD Black';
-    src: url('PlayfairDisplay-Black.ttf') format('TrueType');
-  }
+    src: url('../fonts/PlayfairDisplay-Black.ttf') format('TrueType');
+}
 
-  @font-face {
+@font-face {
     font-family: 'PFD Regular';
-    src: url('PlayfairDisplay-Regular.ttf') format('TrueType');
-  }
+    src: url('../fonts/PlayfairDisplay-Regular.ttf') format('TrueType');
+}
 
-  @font-face {
+@font-face {
     font-family: 'PFD Medium';
-    src: url('PlayfairDisplay-Medium.ttf') format('TrueType');
-  }
+    src: url('../fonts/PlayfairDisplay-Medium.ttf') format('TrueType');
+}
 
 h1{
     font-family: 'PFD Black', sans-serif; 
@@ -60,6 +60,7 @@ header nav ul li{
 header nav ul li a{ 
   text-decoration: none;
   color: white;
+  transition: color 250ms ease-in-out;
 }
 
 nav li.selected{
@@ -74,9 +75,9 @@ a:visited:active {
   text-decoration: underline;
 }
 
-/*home*/
+/*------------------------------------------home------------------------------------------------*/
 
-header section { /*titel*/ /*home*/
+header section { /*titel*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,23 +92,24 @@ header section { /*titel*/ /*home*/
   height: 100vh;
 }
 
-header section a{ /*'button'*/ /*home*/
-  width: 220px; 
-  margin: 20px;
+header section a{ /*'button'*/ 
+  width: 14%;
+  margin:1.20em;
 
   color: white; 
+  transition: color 250ms ease-in-out;
   text-decoration: none;
   font-size: 0.80em;
 
   border: 0.75px solid white;
-  border-radius: 20px;
+  border-radius: 1.20em;
   border-top-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 
 /*body main*/
 
-.achtergrond-beginscherm{ /*home*/
+.achtergrond-beginscherm{ 
   background-image: url('../images/rivier-en-bomen.avif');
   background-size: 100% auto;
 
@@ -116,12 +118,12 @@ header section a{ /*'button'*/ /*home*/
   object-fit: cover;
 }
 
-#over-en-missie div{ /*home*/
+#over-en-missie section{
   display: flex;
   flex-direction: column;
 }
 
-#over-en-missie h2{ /*home*/
+#over-en-missie h2{ 
   text-transform: uppercase;
   font-size: 2em;
 
@@ -129,27 +131,28 @@ header section a{ /*'button'*/ /*home*/
   margin-bottom: 0.5em;
 }
 
-#over-en-missie p{ /*home*/
+#over-en-missie p{ 
   margin-right: 10em;
 }
 
-.foto-van-sela { /*foto van mij*/ /*home*/
-    object-fit: cover;
-    width: 22vw;
+.foto-van-sela-voor{ /*foto van mij*/ 
+  object-fit: cover;
+  width: 22vw;
   
-    margin-top: 5em;
-    margin-right: 5em;
-    margin-left: 5em;
+  margin-top: 3em;
+  margin-right: 5em;
+  margin-left: 5em;
 }
 
-/*toen*/
+/*------------------------------------------toen------------------------------------------------*/
 
-.rijen{ /*toen*/
+body.rijen{ 
   display: flex;
   flex-direction: column;
 }
 
-.afbeelding-links{ /*toen*/
+body.rijen main section:nth-of-type(odd), /* TOEN en ontdekking planten*/
+body.rijen main section:nth-of-type(even){ /*SU en ontwikkeling*/
   display: flex;
   flex-direction: row;
 
@@ -158,76 +161,52 @@ header section a{ /*'button'*/ /*home*/
   margin-bottom: 1em;
 }
 
-.afbeelding-links img{ /*toen*/
+body.rijen main section img{ /* TOEN en ontdekking planten*/
   object-fit: cover;
   width: 35vw;
   height: 30vw;
 }
 
-.afbeelding-links div{ /*toen*/
+body.rijen main div:nth-of-type(odd){ /* TOEN en ontdekking planten*/
   display: flex;
   flex-direction: column;
-
   align-items: center;
+
   padding: 3em 2em 1em 2em;
 }
 
-.afbeelding-rechts{ /*toen*/
+body.rijen h1{  /* TOEN en ontdekking planten*/
+  font-size: 7em;
+  text-transform: uppercase;
+  writing-mode: vertical-lr; /*verticaal https://www.youtube.com/watch?v=ZHB9a05NUXg*/
+}
+
+body.rijen section div h2{ /* TOEN en ontdekking planten*/  /*SU en ontwikkeling*/
+  font-size: 1.5em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.5em;
+}
+
+body.rijen main section:nth-of-type(even){ /*SU en ontwikkeling*/
   display: flex;
   flex-direction: row-reverse;
-
-  background-color: rgba(196, 173, 149, 0.617);
-
-  margin-bottom: 1em;
 }
 
-.afbeelding-rechts img{ /*toen*/
-  object-fit: cover;
-  width: 35vw;
-  height: 30vw;
-}
-
-.afbeelding-rechts div{ /*toen*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 3em 2em 1em 2em;
-}
-
-.afbeelding-rechts a{
+body.rijen main section a{ /*SU*/
   color: #c4547d;
 }
 
-.afbeelding-links h1{ /*toen*/
-  font-size: 8em;
-  text-transform: uppercase;
-}
+/*------------------------------------------nu------------------------------------------------*/
 
-.afbeelding-links h2{ /*toen*/
-  font-size: 1.5em;
-  text-transform: uppercase;
-
-  margin-bottom: 0.5em;
-}
-
-.afbeelding-rechts h2{ /*toen*/
-  font-size: 1.5em;
-  text-transform: uppercase;
-
-  margin-bottom: 0.5em;
-}
-
-/*nu*/
-
-main figure img{ /*nu*/
+body.nu figure img{ /*afbeelding*/
   object-fit: cover;
   
   width: 100vw;
   height: 100vh;
 }
 
-.nu h1{ /*nu*/
+body.nu main section div h1{ /*h1 NU*/
   display: flex;
   justify-content: center;
 
@@ -238,30 +217,52 @@ main figure img{ /*nu*/
   margin-bottom: 0.5em;
 }
 
-.nu div h2{ /*nu*/
+time{ /*tijd*/
   display: flex;
   justify-content: center;
   
-  font-size: 0.7em;
-  letter-spacing: 1.7px;
+  font-size: 0.56em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 
   height: 6vh;
 }
 
-.nu p{ /*nu*/
+body.nu main section p{ /*tekst*/
   width: 44vw;
   margin: 0 auto;
 }
 
-/*dan*/
+.kleur{ /*nu H1 & vision board bij dan*/
+  animation: kleurentekst 7s linear 3s infinite normal none running;
+}
 
-main article{ /*dan*/
+@keyframes kleurentekst { /*nu H1 & vision board bij dan*/
+  0% {
+    color: #8f3e5c;
+  }
+
+  25% {
+    color: #e2739c;
+  }
+  
+  75% {
+    color: #f1c3d7;
+  }
+  
+  100%{
+    color: #8f3e5c;
+  }
+}
+
+/*------------------------------------------dan------------------------------------------------*/
+
+body.dan main section{ /*dan*/
   display: flex;
   flex-direction: column;
 }
 
-article h1{ /*dan*/
+body.dan section h1{ /*dan*/ /*titel dan*/
   display: flex;
   justify-content: center;
 
@@ -271,7 +272,7 @@ article h1{ /*dan*/
   margin-top: 1.5em;
 }
 
-article h2{ /*dan*/
+body.dan section h2{ /*dan*/ /*tekst vision board*/
   display: flex;
   justify-content: center;
 
@@ -282,30 +283,24 @@ article h2{ /*dan*/
   margin-top: 2em;
 }
 
-article figure{ /*dan*/
-  display: flex;
-  justify-content: space-between;
-
-  margin-left: 2em;
-  margin-right: 2em;
+body.dan section figure{ /*dan*/ /*grid*/
+  display: grid;
+  place-items: center;
+  grid-template-columns: 2fr 2fr 2fr;
+  gap: 0.25em;
+  margin-left: 0.24em;
+  margin-right: 0.25em;
 }
 
-article figure img{ /*dan*/
+body.dan section figure img, video{ /*dan*/ /*grid afbeelding*/
+  height: 30vw;
+  width: 33vw;
   object-fit: cover;
-  display: block;
-
-  height: 50vh;
-  margin: 0.15em;
 }
 
-article p{ /*dan*/
-  display: flex;
-  justify-content: space-between;
-
-  width: 35vw;
+body.dan section figure p{ /*dan*/ /*grid afbeelding*/
   text-align: center;
-
-  padding-top: 3em;
+  margin: 2em;
 }
 
 /*main footer*/ /*home*/      
@@ -319,46 +314,45 @@ main footer, #over-en-missie{ /*home*/
 }
 
 main footer figure{ /*home*/
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    margin-top: 2em;
-    width: 33vw;
+  margin-top: 2em;
+  width: 33vw;
 }
 
 main footer img{ /*home*/
-    object-fit: cover;
-    cursor: pointer;
+  object-fit: cover;
+  cursor: pointer;
     
-    width: 30vw;
-    height: 55vh;
+  width: 30vw;
+  height: 55vh;
 
-    border-radius: 0.5em;
+  border-radius: 0.5em;
 }
 
-figure div h3{ /*home*/
+figure section h3{ /*home*/
   text-transform: uppercase;
 
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
-figure div p{ /*home*/
+figure section p{ /*home*/
   font-size: 0.9em;
 
   padding-right: 0.7em;
   margin-bottom: 0.5em;
 }
 
-figure div a{ /*home*/
+figure section a{ /*home*/
   font-size: 0.8em;
   color: #c4547d;
 }
 
-
 /*footer*/
 
-.onderaan a{ /*nu*/
+.onderaan a{ /*nu*/ /*link en dan?*/
   display: block;
 
   color:#c4547d;
@@ -368,4 +362,11 @@ figure div a{ /*home*/
   margin-left: 28vw;
 }
 
-/*implementeren*/
+body.dan footer{ /*dan*/ /*ALLLE bronnen*/
+  display: flex;
+  justify-content: center;
+
+  font-size: 0.7em;
+
+  margin: 3em;
+}
