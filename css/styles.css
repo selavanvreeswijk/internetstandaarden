@@ -1,41 +1,43 @@
-/*alle pagina's*/
-
 * {
-    margin: 0;
-    padding: 0;
-  }
-
-@font-face {
-    font-family:'PFD Black';
-    src: url('../fonts/PlayfairDisplay-Black.ttf') format('TrueType');
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: 'PFD Regular';
-    src: url('../fonts/PlayfairDisplay-Regular.ttf') format('TrueType');
+  font-family:'PFD Black';
+  src: url('../fonts/PlayfairDisplay-Black.ttf') format('TrueType');
 }
 
 @font-face {
-    font-family: 'PFD Medium';
-    src: url('../fonts/PlayfairDisplay-Medium.ttf') format('TrueType');
+  font-family: 'PFD Regular';
+  src: url('../fonts/PlayfairDisplay-Regular.ttf') format('TrueType');
 }
 
-h1{
-    font-family: 'PFD Black', sans-serif; 
-    letter-spacing: 0.04em;
-  }
+@font-face {
+  font-family: 'PFD Medium';
+  src: url('../fonts/PlayfairDisplay-Medium.ttf') format('TrueType');
+}
 
-html {
-    background-color:rgba(196, 173, 149, 0.784);
+h1, h2, h3{
+  font-family: 'PFD Black', sans-serif; 
+  letter-spacing: 0.04em;
+}
 
-    font-family: 'PFD Regular', sans-serif; 
-    letter-spacing: 0.04em;
-    color: #8f3e5c;
-  }
+p{
+  line-height: 1.5;
+}
 
- /*body header*/
+html{
+  background-color:rgba(196, 173, 149, 0.784);
 
-header nav{
+  font-family: 'PFD Regular', sans-serif; 
+  letter-spacing: 0.04em;
+  color: #8f3e5c;
+}
+
+/*body header*/
+
+header nav{ /*bron: hier heeft Kim me mee geholpen*/
   position: absolute;
   z-index: 999;
 }
@@ -54,7 +56,7 @@ header nav ul li{
 
   text-transform: uppercase;
   list-style: none;
-  font-family: 'PFD Medium', sans-serif; 
+  font-family: 'PFD Medium', sans-serif;
 }
 
 header nav ul li a{ 
@@ -63,21 +65,18 @@ header nav ul li a{
   transition: color 250ms ease-in-out;
 }
 
-nav li.selected{
-  color: #c4547d;
-}
-
-a:hover,
-a:visited:hover,
-a:active,
-a:visited:active {
+a:hover{
   color: #c4547d;
   text-decoration: underline;
 }
 
+nav li.selected{ /*huidige pagina geselecteerd*/
+  color: #c4547d;
+}
+
 /*------------------------------------------home------------------------------------------------*/
 
-header section { /*titel*/
+header section { /*titel en 'button'*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,32 +84,35 @@ header section { /*titel*/
   position: absolute;
 
   color: white;
-  text-align: center;
-  font-size: 1.4em;
+  font-size: 1.6em;
 
   width: 100vw;
   height: 100vh;
 }
 
 header section a{ /*'button'*/ 
-  width: 14%;
-  margin:1.20em;
+  text-align: center;
 
   color: white; 
   transition: color 250ms ease-in-out;
   text-decoration: none;
-  font-size: 0.80em;
+  font-size: 0.7em;
 
   border: 0.75px solid white;
   border-radius: 1.20em;
-  border-top-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  width: 14%;
+  margin:1.20em;
 }
 
-/*body main*/
+header section a:hover{
+  border: 0.75px solid #c4547d;
+  text-decoration: none;
+}
+
+/*main*/
 
 .achtergrond-beginscherm{ 
-  background-image: url('../images/rivier-en-bomen.avif');
+  background-image: url('../images/rivier-en-bomen.avif'); /*bron: Kim heeft me geholpen met dit idee. ik heb het uitgevoerd*/
   background-size: 100% auto;
 
   width: 100vw;
@@ -133,107 +135,200 @@ header section a{ /*'button'*/
 
 #over-en-missie p{ 
   margin-right: 10em;
+  margin-bottom: 0.5em;
 }
 
-.foto-van-sela-voor{ /*foto van mij*/ 
+#over-en-missie img{ 
   object-fit: cover;
   width: 22vw;
   
   margin-top: 3em;
   margin-right: 5em;
   margin-left: 5em;
+
+  border-radius: 12em;
+
+  transition: 1s ease-in-out;
+}
+
+#over-en-missie img:hover{
+  transform: scale(1.15)
+}
+
+/*figure, drie plaatjes onderaan*/
+
+body.home div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 2em 3.5em 3em 3.5em;
+}
+
+div figure{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-top: 2em;
+  width: 33vw;
+}
+
+div figure a p{ 
+  position: absolute; /*bron: hier heeft kim me mee geholpen*/
+  top: 35%; /*bron: hier heeft kim me mee geholpen*/
+  left: 50%; /*bron: hier heeft kim me mee geholpen*/
+  transform: translate(-50%, -50%); /*bron: hier heeft kim me mee geholpen*/
+
+  color: white;
+  font-size: 1em;
+
+  opacity: 0; /*bron: hier heeft kim me mee geholpen*/
+  transition: 0.6s ease-in-out;
+}
+
+div figure:hover a p{ 
+  opacity: 1; /*bron: hier heeft kim me mee geholpen*/
+}
+
+div figure a p:hover{ 
+  color: #c4547d;
+  text-decoration: underline;
+}
+
+div figure img{ 
+  object-fit: cover;
+
+  width: 30vw;
+  height: 55vh;
+
+  border-radius: 0.5em;
+
+  transition: transform 0.6s ease-in-out;
+}
+
+div figure:hover a img{ 
+  transform: scale(0.95);
+  opacity: 0.5;
+}
+
+div figure figcaption h3{
+  text-transform: uppercase;
+
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+div figure figcaption p{
+  font-size: 0.9em;
+
+  padding-right: 0.7em;
+  margin-bottom: 0.5em;
 }
 
 /*------------------------------------------toen------------------------------------------------*/
 
-body.rijen{ 
+body.toen{ 
   display: flex;
   flex-direction: column;
 }
 
-body.rijen main section:nth-of-type(odd), /* TOEN en ontdekking planten*/
-body.rijen main section:nth-of-type(even){ /*SU en ontwikkeling*/
+body.toen main section:nth-of-type(odd), /* TOEN, ontdekking planten*/
+body.toen main section:nth-of-type(even){ /*SU, ontwikkeling*/
   display: flex;
   flex-direction: row;
 
   background-color: rgba(196, 173, 149, 0.617);
 
-  margin-bottom: 1em;
+  margin-bottom: 0.75em; /*spacing tussen de flexboxes*/
 }
 
-body.rijen main section img{ /* TOEN en ontdekking planten*/
+body.toen main section img{ /* TOEN, ontdekking planten*/
   object-fit: cover;
-  width: 35vw;
-  height: 30vw;
+  width: 44vw;
+  height: 61vh;
 }
 
-body.rijen main div:nth-of-type(odd){ /* TOEN en ontdekking planten*/
+body.toen main section div{
+  padding: 2em;
+}
+
+body.toen main section:first-of-type div{ /*TOEN tekst*/
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 3em 2em 1em 2em;
+  flex-direction: row-reverse;
+  padding-top: 2em;
 }
 
-body.rijen h1{  /* TOEN en ontdekking planten*/
-  font-size: 7em;
+body.toen main section:first-of-type div p{ /*TOEN tekst*/
+  padding-top: 5em;
+}
+
+body.toen main h1{ /* TOEN, ontdekking planten*/
+  font-size: 8em;
   text-transform: uppercase;
-  writing-mode: vertical-lr; /*verticaal https://www.youtube.com/watch?v=ZHB9a05NUXg*/
+  writing-mode: vertical-lr;
 }
 
-body.rijen section div h2{ /* TOEN en ontdekking planten*/  /*SU en ontwikkeling*/
+body.toen main section div h2{ /*ontdekking planten, SU, ontwikkeling*/
   font-size: 1.5em;
   text-transform: uppercase;
 
   margin-bottom: 0.5em;
 }
 
-body.rijen main section:nth-of-type(even){ /*SU en ontwikkeling*/
+body.toen main section:nth-of-type(even){ /*SU, ontwikkeling*/
   display: flex;
   flex-direction: row-reverse;
 }
 
-body.rijen main section a{ /*SU*/
+body.toen main section a{ /*SU yt-video*/
+  color: white;
+  transition: color 250ms ease-in-out;
+}
+
+body.toen main section a:hover{ /*SU yt-video*/
   color: #c4547d;
 }
 
 /*------------------------------------------nu------------------------------------------------*/
 
-body.nu figure img{ /*afbeelding*/
+body.nu img{
   object-fit: cover;
   
   width: 100vw;
   height: 100vh;
 }
 
-body.nu main section div h1{ /*h1 NU*/
+body.nu section{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
+  align-items: center;
+  text-align: center;
+}
+
+body.nu h1{
   text-transform: uppercase;
   font-size: 2em;
 
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
-time{ /*tijd*/
-  display: flex;
-  justify-content: center;
-  
-  font-size: 0.56em;
+time{
+  font-size: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  height: 6vh;
 }
 
 body.nu main section p{ /*tekst*/
-  width: 44vw;
-  margin: 0 auto;
+  width: 46vw;
+  text-align: left;
+
+  margin-top: 1em;
 }
 
-.kleur{ /*nu H1 & vision board bij dan*/
+.kleur{ /*bij nu H1 & vision board H2 bij dan*/
   animation: kleurentekst 7s linear 3s infinite normal none running;
 }
 
@@ -257,25 +352,20 @@ body.nu main section p{ /*tekst*/
 
 /*------------------------------------------dan------------------------------------------------*/
 
-body.dan main section{ /*dan*/
+body.dan main section{ 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-body.dan section h1{ /*dan*/ /*titel dan*/
-  display: flex;
-  justify-content: center;
-
+body.dan section h1{ /*titel*/
   text-transform: uppercase;
   font-size: 7em;
 
   margin-top: 1.5em;
 }
 
-body.dan section h2{ /*dan*/ /*tekst vision board*/
-  display: flex;
-  justify-content: center;
-
+body.dan section h2{ /*tekst vision board*/ 
   text-transform: uppercase;
   font-size: 1em;
 
@@ -283,7 +373,7 @@ body.dan section h2{ /*dan*/ /*tekst vision board*/
   margin-top: 2em;
 }
 
-body.dan section figure{ /*dan*/ /*grid*/
+body.dan section figure{ /*grid*/ /* bron= https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns*/
   display: grid;
   place-items: center;
   grid-template-columns: 2fr 2fr 2fr;
@@ -292,81 +382,151 @@ body.dan section figure{ /*dan*/ /*grid*/
   margin-right: 0.25em;
 }
 
-body.dan section figure img, video{ /*dan*/ /*grid afbeelding*/
+body.dan section figure img, video{ /*bron = https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video*/
   height: 30vw;
   width: 33vw;
   object-fit: cover;
 }
 
-body.dan section figure p{ /*dan*/ /*grid afbeelding*/
+body.dan section figure p{ 
   text-align: center;
   margin: 2em;
 }
 
-/*main footer*/ /*home*/      
+/*------------------------------------------bronnen------------------------------------------------*/
 
-main footer, #over-en-missie{ /*home*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  margin: 2em 3.5em 3em 3.5em;
-}
-
-main footer figure{ /*home*/
+body.bronnen section{
   display: flex;
   flex-direction: column;
 
-  margin-top: 2em;
-  width: 33vw;
+  margin-left: 15em;
+  margin-right: 15em;
+  margin-bottom: 1em;
+
+  border-bottom: 0.75px solid #c4547d;
 }
 
-main footer img{ /*home*/
-  object-fit: cover;
-  cursor: pointer;
-    
-  width: 30vw;
-  height: 55vh;
+body.bronnen section h1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  border-radius: 0.5em;
-}
-
-figure section h3{ /*home*/
+  font-size: 2em;
   text-transform: uppercase;
 
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
+  margin-top: 3.3em;
 }
 
-figure section p{ /*home*/
-  font-size: 0.9em;
+body.bronnen section h2, ul{
+  margin-bottom: 1em;
 
-  padding-right: 0.7em;
-  margin-bottom: 0.5em;
+  list-style: circle;
 }
 
-figure section a{ /*home*/
-  font-size: 0.8em;
+body.bronnen section h2{
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+body.bronnen section a{
   color: #c4547d;
+  transition: color 250ms ease-in-out;
+}
+
+body.bronnen section a:hover{
+  color: white;
+  
+}
+
+body.bronnen section:last-of-type{
+  margin-bottom: 3em;
 }
 
 /*footer*/
 
-.onderaan a{ /*nu*/ /*link en dan?*/
-  display: block;
-
-  color:#c4547d;
-
-  margin-top: 1em;
-  margin-bottom: 5em;
-  margin-left: 28vw;
-}
-
-body.dan footer{ /*dan*/ /*ALLLE bronnen*/
+footer{
   display: flex;
   justify-content: center;
 
-  font-size: 0.7em;
+  font-size: 0.9em;
 
-  margin: 3em;
+  margin-bottom: 3em;
+  margin-top: 2em;
+}
+ 
+footer a{
+  color: white;
+  border: 0.75px solid #c4547d;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  transition: all 250ms ease-in-out;
+}
+
+footer a:hover{
+  color: #c4547d;
+  border: 0.75px solid white;
+
+  text-decoration: underline;
+}
+
+/*------------------------------------------uitproberen------------------------------------------------*/
+
+.maincontainer{
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  height: 320px;
+  background: green;
+}
+
+.thecard{
+  position: absolute;
+  width: 250px;
+  height: 330px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  background: pink;
+}
+
+.driehoek, .driehoek2{
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background: rgb(196, 74, 94);
+  margin-bottom: 6.25em;
+}
+
+.driehoek::after{ /* bron https://www.youtube.com/watch?v=6QGOhCZLdhs*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(2deg);
+}
+
+.driehoek2::after{ 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transform: skewY(-8deg);
 }
